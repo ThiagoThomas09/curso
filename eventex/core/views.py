@@ -1,8 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+
+from eventex.core.models import Speaker
 
 def home(request):
-    speakers = [
-        {'name': 'Michael Scott', 'photo': 'https://miro.medium.com/v2/resize:fit:1396/1*njwXqsShWvK81ANQCMBevw.jpeg'},
-        {'name': 'Jim Halpert', 'photo': 'https://www.denofgeek.com/wp-content/uploads/2021/10/Jim-The-Office-John-Krasinski.jpg?fit=1200%2C675'}
-    ]
+    speakers = Speaker.objects.all()
     return render(request, 'index.html', {'speakers': speakers})
+
+def speaker_detail(request, slug):
+    speaker = get_object_or_404(Speaker, slug=slug)
+    return render(request, 'core/speaker_detail.html', {'speaker': speaker})

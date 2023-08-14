@@ -1,0 +1,24 @@
+[
+{
+    "model": "core.speaker",
+    "pk": 1,
+    "fields": {
+        "name": "Michael Scott",
+        "slug": "michael-scott",
+        "photo": "https://miro.medium.com/v2/resize:fit:1396/1*njwXqsShWvK81ANQCMBevw.jpeg",
+        "website": "http://hbn.link/scott-site",
+        "description": "Regional Manager"
+    }
+},
+{
+    "model": "core.speaker",
+    "pk": 2,
+    "fields": {
+        "name": "Jim Halpert",
+        "slug": "jim-halpert",
+        "photo": "https://www.denofgeek.com/wp-content/uploads/2021/10/Jim-The-Office-John-Krasinski.jpg?fit=1200%2C675'",
+        "website": "http://hbn.link/halpert-site",
+        "description": "Salesman at Dunder Mifflin"
+    }
+}
+]
